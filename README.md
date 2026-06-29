@@ -23,6 +23,18 @@ Given a recipe's information (calories, macronutrients, number of servings, dish
    - **Random Forest** (scikit-learn) and feature importance analysis.
 5. **Interpretation**: identifying the most influential variables (calories, carbohydrate, and sugar stand out as the most decisive).
 
+## Results
+
+Test-set performance (20% hold-out):
+
+| Model | Test accuracy |
+|-------|:-------------:|
+| LPM | 0.59 |
+| Logit | 0.60 |
+| **Random Forest** | **0.68** |
+
+The **Random Forest** is the best predictor (F1 = 0.74 on the high-traffic class), using the full feature set. The parametric models (LPM, Logit) are kept for **interpretation**: they quantify the marginal effects and show that calories, carbohydrate and sugar are the most significant drivers of high traffic.
+
 ## Tech stack
 
 `Python` · `pandas` · `numpy` · `matplotlib` · `seaborn` · `scikit-learn` · `statsmodels`
